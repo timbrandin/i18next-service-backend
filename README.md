@@ -1,4 +1,4 @@
-Backend[![Travis](https://img.shields.io/travis/timbrandin/i18next-service-backend/master.svg?style=flat-square)](https://travis-ci.org/timbrandin/i18next-service-backend)
+[![Travis](https://img.shields.io/travis/timbrandin/i18next-service-backend/master.svg?style=flat-square)](https://travis-ci.org/timbrandin/i18next-service-backend)
 [![npm version](https://img.shields.io/npm/v/i18next-service-backend.svg?style=flat-square)](https://www.npmjs.com/package/i18next-service-backend)
 [![David](https://img.shields.io/david/timbrandin/i18next-service-backend.svg?style=flat-square)](https://david-dm.org/timbrandin/i18next-service-backend)
 
