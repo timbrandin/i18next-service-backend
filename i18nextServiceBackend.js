@@ -98,16 +98,18 @@ function ajax(url, options, callback, data, cache) {
 }
 
 function getDefaults(serviceUrl) {
-  return {
-    loadPath: serviceUrl + '/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    getLanguagesPath: serviceUrl + '/languages/{{projectId}}',
-    addPath: serviceUrl + '/missing/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    updatePath: serviceUrl + '/update/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    referenceLng: 'en',
-    crossDomain: true,
-    setContentTypeJSON: false,
-    version: 'latest'
-  };
+  if (serviceUrl) {
+    return {
+      loadPath: serviceUrl + '/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+      getLanguagesPath: serviceUrl + '/languages/{{projectId}}',
+      addPath: serviceUrl + '/missing/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+      updatePath: serviceUrl + '/update/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+      referenceLng: 'en',
+      crossDomain: true,
+      setContentTypeJSON: false,
+      version: 'latest'
+    };
+  }
 }
 
 var Backend = function () {
