@@ -42,9 +42,11 @@ i18next
 
 ```js
 {
-  service: '[SERVICE_URL]', // i.e. https://api.spacetranslate.com or https://api.locize.com
+  // service url to the backend service
+  // i.e. https://api.spacetranslate.com or https://api.locize.io
+  service: '[SERVICE_URL]',
 
-  // the id of your backend project
+  // the id of your project
   projectId: '[PROJECTID]',
 
   // add an api key if you want to send missing keys
