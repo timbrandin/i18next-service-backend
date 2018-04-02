@@ -1,6 +1,5 @@
 Backend[![Travis](https://img.shields.io/travis/timbrandin/i18next-service-backend/master.svg?style=flat-square)](https://travis-ci.org/timbrandin/i18next-service-backend)
 [![npm version](https://img.shields.io/npm/v/i18next-service-backend.svg?style=flat-square)](https://www.npmjs.com/package/i18next-service-backend)
-[![Bower](https://img.shields.io/bower/v/i18next-service-backend.svg)]()
 [![David](https://img.shields.io/david/timbrandin/i18next-service-backend.svg?style=flat-square)](https://david-dm.org/timbrandin/i18next-service-backend)
 
 This is an i18next backend to be used for external services, such as [spacetranslate](https://spacetranslate.com) or [locize](https://locize.com). It will load resources from the external server using xhr.
