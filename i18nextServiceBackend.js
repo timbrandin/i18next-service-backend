@@ -127,7 +127,7 @@ var Backend = function () {
       var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
       this.services = services;
-      this.options = _extends({}, getDefaults(), this.options, options);
+      this.options = _extends({}, getDefaults(options.service), this.options, options);
 
       this.queuedWrites = {};
       this.debouncedProcess = debounce(this.process, 10000);
