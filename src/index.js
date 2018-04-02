@@ -23,12 +23,12 @@ function ajax(url, options, callback, data, cache) {
   }
 };
 
-function getDefaults() {
+function getDefaults(serviceUrl) {
   return {
-    loadPath: 'https://api.locize.io/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    getLanguagesPath: 'https://api.locize.io/languages/{{projectId}}',
-    addPath: 'https://api.locize.io/missing/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    updatePath: 'https://api.locize.io/update/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+    loadPath: serviceUrl + '/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+    getLanguagesPath: serviceUrl + '/languages/{{projectId}}',
+    addPath: serviceUrl + '/missing/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+    updatePath: serviceUrl + '/update/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
     referenceLng: 'en',
     crossDomain: true,
     setContentTypeJSON: false,
@@ -45,7 +45,7 @@ class Backend {
 
   init(services, options = {}) {
     this.services = services;
-    this.options = { ...getDefaults(), ...this.options, ...options };
+    this.options = { ...getDefaults(options.service), ...this.options, ...options };
 
     this.queuedWrites = {};
     this.debouncedProcess = utils.debounce(this.process, 10000);

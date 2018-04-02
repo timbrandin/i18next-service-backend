@@ -8,6 +8,7 @@ describe('XHR backend', () => {
     backend = new XHR({
       interpolator: new Interpolator()
     }, {
+      service: 'http://localhost:9876',
       loadPath: 'http://localhost:9876/locales/{{lng}}/{{ns}}.json'
     });
   });

@@ -1,7 +1,7 @@
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
-  (global.i18nextLocizeBackend = factory());
+  (global.i18nextServiceBackend = factory());
 }(this, (function () { 'use strict';
 
 function debounce(func, wait, immediate) {
@@ -97,12 +97,12 @@ function ajax(url, options, callback, data, cache) {
   }
 }
 
-function getDefaults() {
+function getDefaults(serviceUrl) {
   return {
-    loadPath: 'https://api.locize.io/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    getLanguagesPath: 'https://api.locize.io/languages/{{projectId}}',
-    addPath: 'https://api.locize.io/missing/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
-    updatePath: 'https://api.locize.io/update/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+    loadPath: serviceUrl + '/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+    getLanguagesPath: serviceUrl + '/languages/{{projectId}}',
+    addPath: serviceUrl + '/missing/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
+    updatePath: serviceUrl + '/update/{{projectId}}/{{version}}/{{lng}}/{{ns}}',
     referenceLng: 'en',
     crossDomain: true,
     setContentTypeJSON: false,

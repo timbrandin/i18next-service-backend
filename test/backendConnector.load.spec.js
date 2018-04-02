@@ -10,7 +10,10 @@ describe('BackendConnector basic load', () => {
     connector = new BackendConnector(new XHR(), new ResourceStore(), {
       interpolator: new Interpolator()
     }, {
-      backend: { loadPath: 'http://localhost:9876/locales/{{lng}}/{{ns}}.json' }
+      backend: {
+        service: 'http://localhost:9876',
+        loadPath: 'http://localhost:9876/locales/{{lng}}/{{ns}}.json'
+      }
     });
   });
 

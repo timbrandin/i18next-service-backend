@@ -13,9 +13,9 @@ const babelOptions = {
 };
 
 const dest = {
-  amd: `dist/amd/i18nextLocizeBackend${compress ? '.min' : ''}.js`,
-  umd: `dist/umd/i18nextLocizeBackend${compress ? '.min' : ''}.js`,
-  iife: `dist/iife/i18nextLocizeBackend${compress ? '.min' : ''}.js`
+  amd: `dist/amd/i18nextServiceBackend${compress ? '.min' : ''}.js`,
+  umd: `dist/umd/i18nextServiceBackend${compress ? '.min' : ''}.js`,
+  iife: `dist/iife/i18nextServiceBackend${compress ? '.min' : ''}.js`
 }[format];
 
 export default {
@@ -25,7 +25,7 @@ export default {
     babel(babelOptions),
     nodeResolve({ jsnext: true })
   ].concat(compress ? uglify() : []),
-  moduleName: 'i18nextLocizeBackend',
-  //moduleId: 'i18nextLocizeBackend',
+  moduleName: 'i18nextServiceBackend',
+  //moduleId: 'i18nextServiceBackend',
   dest
 };
