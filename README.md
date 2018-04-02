@@ -3,7 +3,7 @@ Backend[![Travis](https://img.shields.io/travis/timbrandin/i18next-service-backe
 [![Bower](https://img.shields.io/bower/v/i18next-service-backend.svg)]()
 [![David](https://img.shields.io/david/timbrandin/i18next-service-backend.svg?style=flat-square)](https://david-dm.org/timbrandin/i18next-service-backend)
 
-This is an i18next backend to be used for external services, such as [locize](https://locize.com) or [spacetranslate](https://spacetranslate.com). It will load resources from the external server using xhr.
+This is an i18next backend to be used for external services, such as [spacetranslate](https://spacetranslate.com) or [locize](https://locize.com). It will load resources from the external server using xhr.
 
 It will allow you to save missing keys containing both **default value** and **context information** by calling:
 
@@ -43,7 +43,7 @@ i18next
 
 ```js
 {
-  service: '[SERVICE_URL]', // i.e. https://api.locize.com or https://api.spacetranslate.com
+  service: '[SERVICE_URL]', // i.e. https://api.spacetranslate.com or https://api.locize.com
 
   // the id of your backend project
   projectId: '[PROJECTID]',
